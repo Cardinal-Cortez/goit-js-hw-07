@@ -32,7 +32,11 @@ galleryContainer.addEventListener('click',(event) => {
 `)
 
 instance.show()
+function onCloseModal(event) {
+    if (event.code === 'Escape') {
+    instance.close()
+}}
 
-// instance.show()
-// instance.show(() => console.log('lightbox now visible'))
+window.addEventListener('keydown',onCloseModal);
+
 });
